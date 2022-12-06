@@ -1,3 +1,4 @@
 sanic==22.6.2
-transformers
-accelerate
+min-dalle==0.4.7
+IPython
+pillow
