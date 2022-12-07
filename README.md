@@ -1,7 +1,7 @@
 
 # 🍌 Banana Serverless
 
-This repo gives a framework to serve ML models in production using simple HTTP servers.
+This repo gives a basic framework for serving Craiyon (Dall-e mini) in production using simple HTTP servers. Does not need a Huggingface token, ready for 1-click deploy
 
 # Quickstart
 **[Follow the quickstart guide in Banana's documentation to use this repo](https://docs.banana.dev/banana-docs/quickstart).** 
