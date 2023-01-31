@@ -1,0 +1,11 @@
+{
+    "name": "Craiyon",
+    "category": "Computer Vision",
+    "example_input": {
+        "prompt": "the Eiffel tower landing on the moon"
+    },
+    "example_output": {
+        "image_base64": "<BASE64_STRING>"
+    },
+    "version": "1"
+  }

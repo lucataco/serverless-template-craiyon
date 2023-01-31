@@ -1,4 +1,4 @@
 sanic==22.6.2
 min-dalle==0.4.7
-IPython
-pillow
+ipython==7.34.0
+pillow==9.3.0

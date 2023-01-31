@@ -28,13 +28,6 @@ def inference(model_inputs:dict) -> dict:
     prompt = model_inputs.get('prompt', None)
     if prompt == None:
         return {'message': "No prompt provided"}
-    
-    progressive_outputs = True
-    seamless = False
-    grid_size = 1
-    temperature = 1
-    supercondition_factor = 16
-    top_k = 128
 
     image = model.generate_image(
         text=prompt,
@@ -46,9 +39,9 @@ def inference(model_inputs:dict) -> dict:
         supercondition_factor=32,
         is_verbose=False
     )
-    image.save('local.jpeg')
-    with open('local.jpeg', "rb") as img_file:
-        image_base64 = base64.b64encode(img_file.read()).decode('utf-8')
+    buffered = BytesIO()
+    image.save(buffered,format="JPEG")
+    image_base64 = base64.b64encode(buffered.getvalue()).decode('utf-8')
 
     # Return the results as a dictionary
     return {'image_base64': image_base64}
